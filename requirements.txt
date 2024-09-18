@@ -1,0 +1,9 @@
+Flask==2.2.2
+gunicorn
+Werkzeug==2.2.2
+langchain
+langchain-community
+langchain-chroma
+langchain-openai
+beautifulsoup4
+sentence-transformers
