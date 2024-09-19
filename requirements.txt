@@ -7,3 +7,4 @@ langchain-chroma
 langchain-openai
 beautifulsoup4
 sentence-transformers
+pyslite3-binary
