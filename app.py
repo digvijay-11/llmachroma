@@ -10,6 +10,9 @@ from langchain_community.embeddings.sentence_transformer import (SentenceTransfo
 
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
+__import__('pyslite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pyslite3')
 
 app = Flask(__name__)
 
