@@ -45,11 +45,11 @@ def hello():
     splits = text_Splitter.split_documents(docs)
 
     embedding_function = SentenceTransformerEmbeddings(model_name= "all-MiniLM-L6-v2")
-    if os.path.exists('../mnt/chroma_db_new'):
+    if os.path.exists('/mnt/chroma_db_new'):
       pass
     else:
-      db2 = Chroma.from_documents(documents=splits, embedding=embedding_function, persist_directory="../mnt/chroma_db_new")
-    db3 = Chroma(persist_directory="../mnt/chroma_db_new", embedding_function=embedding_function)
+      db2 = Chroma.from_documents(documents=splits, embedding=embedding_function, persist_directory="/mnt/chroma_db_new")
+    db3 = Chroma(persist_directory="/mnt/chroma_db_new", embedding_function=embedding_function)
 
     result1 = db3.similarity_search(req, k=1)
     if req:
